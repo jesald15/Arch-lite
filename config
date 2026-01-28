@@ -1,3 +1,4 @@
+#THIS CONFIG FILE IS CREATED BY JESALD C-JAN28/2027
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -232,13 +233,13 @@ bindsym $mod+Shift+h exec systemctl hibernate
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+Shift+m exec systemctl reboot
 
-
-
-
 # MEDIA CONTROLS (SHOULD INSTALL PLAYERCTL)
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# Enable tap-to-click and two-finger right click
+exec --no-startup-id xinput set-prop "ELAN0712:00 04F3:30FD Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "ELAN0712:00 04F3:30FD Touchpad" "libinput Click Method Enabled" 0 1
 
