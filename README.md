@@ -1,4 +1,22 @@
-# i3_config-minimal
+#STEP0: Arch Install
+1. Prompt specified for wifi
+```
+iwctl
+```
+2. Find your wifi station
+```
+station wlan0 get-networks
+```
+After that type `exit` 
+3. Connect to wifi
+```
+iwctl --passpharse "Type your wifi password" station wlan0 connect "Type your SSID"
+```
+4. Check if it is connected
+```
+ping archlinus.org (or any website) 
+```
+---
 
 # i3 Dotfiles Setup and Overview
 
