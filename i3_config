@@ -1,4 +1,5 @@
-#THIS CONFIG FILE IS CREATED BY JESALD C-JAN28/2027
+#THIS CONFIG FILE CREATED BY JESALD C-JAN28/2027
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -60,7 +61,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty
 
 #start a browser
-bindsym $mod+b exec #remove this comment and type your browser open-command
+bindsym $mod+b exec brave
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -216,7 +217,17 @@ bar {
 	height 28
 	font pango:monospace 10
 	
-#	status_command ~/.config/i3/status.sh
+	 colors {
+   	     background #1e1e2e
+   	     statusline #cdd6f4
+   	     separator  #45475a
+
+   	    	 focused_workspace  #89b4fa #89b4fa #1e1e2e
+   	   	 active_workspace   #313244 #313244 #cdd6f4
+   	  	inactive_workspace #1e1e2e #1e1e2e #a6adc8
+    		 urgent_workspace   #f38ba8 #f38ba8 #1e1e2e
+    }
+	
 }
 
 #APPLICATIONS SHORTCUTS 
@@ -233,13 +244,18 @@ bindsym $mod+Shift+h exec systemctl hibernate
 bindsym $mod+Shift+p exec systemctl poweroff
 bindsym $mod+Shift+m exec systemctl reboot
 
+
+
+
 # MEDIA CONTROLS (SHOULD INSTALL PLAYERCTL)
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+
 # Enable tap-to-click and two-finger right click
-exec --no-startup-id xinput set-prop "type_your_model Touchpad" "libinput Tapping Enabled" 1  
-exec --no-startup-id xinput set-prop "type_your_model Touchpad" "libinput Click Method Enabled" 0 1
+exec --no-startup-id xinput set-prop "ELAN0712:00 04F3:30FD Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "ELAN0712:00 04F3:30FD Touchpad" "libinput Click Method Enabled" 0 1
+
 
