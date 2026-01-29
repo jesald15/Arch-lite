@@ -20,7 +20,7 @@ iwctl --passpharse "Type your wifi password" station wlan0 connect "Type your SS
 ```
 4. Check if it is connected
 ```
-ping archlinus.org (or any website) 
+ping archlinux.org (or any website) 
 ```
 ## STEP1: Arch Install
 Just type:
@@ -30,7 +30,7 @@ archinstall
 ```
 ---
 
-## i3WM Dot files
+## STEP2 i3WM Dot files
 
 This README provides an overview of the i3 configuration setup, required applications, and all updated keyboard shortcuts.
 
@@ -62,7 +62,7 @@ To make this setup work properly, ensure the following applications are installe
 * **i3**: Window manager
 * **i3status**: Status bar manager
 * **kitty**: Terminal emulator
-* **brave**: Web browser
+* **Web browser** //firefox or any 
 
 #### Utilities
 
@@ -77,11 +77,12 @@ To make this setup work properly, ensure the following applications are installe
 * **flameshot**: Screenshot utility
 * **xorg-xinput**: Tounchpad-setup
 * **blueman**: Bluetooth
+* **usbutilis**: USB
 
 Install on Arch Linux:
 
 ```bash
-sudo pacman -S i3 i3status kitty brave dmenu dex xss-lock i3lock networkmanager nm-applet brightnessctl playerctl lm_sensors feh flameshot xorg-xinput blueman
+sudo pacman -S i3 i3status kitty brave dmenu dex xss-lock i3lock networkmanager nm-applet brightnessctl playerctl lm_sensors feh flameshot xorg-xinput blueman usbutils
 ```
 
 Run sensors detect:
@@ -104,7 +105,7 @@ All shortcuts are documented in the file `i3_shortcuts.txt`. Quick summary:
 #### Window Management
 
 * Open terminal: $mod + Return → kitty
-* Open browser: $mod + b → brave
+* Open browser: $mod + b → //opens a browser
 * Close focused window: Alt + Shift + q
 * Toggle fullscreen: Alt + f
 * Toggle floating: Alt + Shift + Space
@@ -177,15 +178,11 @@ All shortcuts are documented in the file `i3_shortcuts.txt`. Quick summary:
 
 # Misc
 
-## Fix Android Phone Not Recognized on Arch Linux
+## Fix USB Not Recognized on Arch Linux
 
 If your Android phone is detected by USB (`lsusb`) but does not appear in the file manager, the issue is missing MTP support. Install the required packages below to enable proper Android file transfer on Arch Linux.
 
 ```bash
-sudo pacman -S usbutils
 lsusb
 sudo pacman -S android-file-transfer mtpfs gvfs gvfs-mtp
 ```
-
----
-
