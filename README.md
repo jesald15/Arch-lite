@@ -193,7 +193,7 @@ sudo pacman -S android-file-transfer mtpfs gvfs gvfs-mtp
 Reconnect your phone and enable **File Transfer (MTP)** mode.
 
 ---
-**It's good to have a fallback distro other i3**
+**It's good to have a fallback distro other than i3**
 
 ## ❤️ Support My Work
 
