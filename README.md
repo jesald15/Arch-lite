@@ -57,50 +57,36 @@ Once internet is working, start the guided installer just type:
 archinstall
 ```
 
-> Recommended choices:
->
-> * Minimal profile
-> * PipeWire audio
-> * NetworkManager
-> * EFI system (if supported)
-> * User account creation
-
 ---
 
-##  STEP 2: i3 Window Manager Setup
+# STEP 2 : i3wm
 
-### First Login Important Step ⚠️
+1. **First login to i3**
 
-##  Required Applications / Packages
+   On your first login, i3 will ask:
 
-### Essentials
+   - Create default config? → **Yes**
+   - Modifier key? → **Win / Mod4**
 
-* i3 – Window manager
-* i3status – Status bar
-* kitty – Terminal emulator
-* Web browser (Firefox / Brave)
+   This step **must be done before running the installer**.
 
-### Utilities
-
-* dmenu – App launcher
-* dex – XDG autostart
-* xss-lock + i3lock – Screen locking
-* NetworkManager + nm-applet – Network
-* brightnessctl – Brightness control
-* playerctl – Media control
-* lm_sensors – Temperature monitoring
-* feh – Wallpaper management
-* flameshot – Screenshot tool
-* xorg-xinput – Touchpad configuration
-* blueman – Bluetooth
-* usbutils – USB utilities
+2. **Open a terminal** (kitty or another terminal)
 
 ### Install all packages
 
 ```bash
-sudo pacman -S i3 i3status kitty brave dmenu dex xss-lock i3lock \
-networkmanager nm-applet brightnessctl playerctl lm_sensors feh \
-flameshot xorg-xinput blueman usbutils
+sudo pacman -S --needed --noconfirm \
+i3 i3status \
+kitty dmenu dex \
+xss-lock i3lock \
+networkmanager nm-applet \
+brightnessctl playerctl lm_sensors \
+thunar xorg-xinput \
+blueman usbutils \
+firefox \
+wine wine-mono wine-gecko winetricks \
+telegram-desktop deltachat-desktop \
+neovim nano
 ```
 
 Enable NetworkManager:
@@ -115,65 +101,17 @@ Detect sensors:
 sudo sensors-detect
 ```
 
----
 
-When you **log into i3 for the first time**, you will be prompted to:
+3. **Clone this repository**
 
-1. **Create a default i3 configuration** → choose **Yes**
-2. **Select a modifier key** → choose **Win (Mod4)**
+   ```bash
+   git clone https://github.com/yourname/arch-lite.git
+   cd arch-lite
+   chmod +x install.sh
+   ./install.sh
+   ```
 
-This creates:
-
-```text
-~/.config/i3/config
-```
-
-You must allow this step before replacing the config with dotfiles.
-
----
-
-##  STEP 3: Apply i3 Dotfiles
-
-This repository provides:
-
-* i3 configuration → `~/.config/i3/config`
-* i3status configuration → `~/.config/i3status/config`
-
-After first login, copy the configs:
-
-```bash
-mkdir -p ~/.config/i3 ~/.config/i3status
-cp config ~/.config/i3/config
-cp i3status ~/.config/i3status/config
-```
-
-Reload i3:
-
-```bash
-Mod + Shift + C
-```
-
----
-
-## Overview of the i3 Setup
-
-This i3 configuration includes:
-
-* 10 custom workspaces
-* Tiling & floating window management
-* i3status bar with:
-
-  * CPU usage & temperature
-  * Memory & disk usage
-  * Battery status
-  * Volume & brightness
-  * Wi‑Fi status
-  * Clock
-* Media control shortcuts
-* Power management shortcuts
-* Terminal: **kitty**
-* Browser: **user choice (Firefox / Brave / etc.)**
-* Wallpaper management via **feh**
+4. Restart the config files `Mod + Shift + C`
 
 ---
 
@@ -208,5 +146,8 @@ Even a ⭐ on the repository helps a lot.
 ](https://buymeacoffee.com/jesald)
 
 ---
+
+
+
 
 
