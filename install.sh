@@ -13,21 +13,6 @@ fi
 # Update system
 sudo pacman -Syu --noconfirm
 
-# Install required packages
-sudo pacman -S --needed --noconfirm \
-i3 i3status \
-kitty dmenu dex \
-xss-lock i3lock \
-networkmanager nm-applet \
-brightnessctl playerctl lm_sensors \
-thunar xorg-xinput \
-blueman usbutils \
-firefox \
-wine wine-mono wine-gecko winetricks \
-telegram-desktop deltachat-desktop \
-neovim nano
-
-
 # Enable NetworkManager
 sudo systemctl enable --now NetworkManager
 
