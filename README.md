@@ -83,7 +83,21 @@ archinstall
 sudo pacman -S obsidian flameshot firefox nemo neovim android-file-transfer mtpfs gvfs gvfs-mtp wine wine-mon wine-gecko winetricks telegram-desktop deltachat-desktop brightnessctl xorg-xinput
 ```
 
-7. Reboot
+7. Other packages (AUR)
+   Aur support - yay
+```
+   sudo pacman -S --needed base-devel git
+   git clone https://aur.archlinux.org/yay.git
+   cd yay
+   makepkg -si
+```
+
+8. aur packages
+```
+yay -s brave peazip
+```
+
+8. Reboot
 ---
 
 ##  Keyboard Shortcuts
