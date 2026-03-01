@@ -80,7 +80,7 @@ archinstall
 6. Install these packages (Remove things that you don't want)
 
 ```
-sudo pacman -S obsidian flameshot firefox nemo neovim android-file-transfer mtpfs gvfs gvfs-mtp wine wine-mon wine-gecko winetricks telegram-desktop deltachat-desktop brightnessctl xorg-xinput
+sudo pacman -S obsidian flameshot firefox nemo neovim android-file-transfer mtpfs gvfs gvfs-mtp wine wine-mon wine-gecko winetricks telegram-desktop brightnessctl xorg-xinput feh freecad vlc arandr alacritty 
 ```
 
 7. Other packages (AUR)
@@ -94,7 +94,7 @@ sudo pacman -S obsidian flameshot firefox nemo neovim android-file-transfer mtpf
 
 8. aur packages
 ```
-yay -s brave peazip
+yay -s brave peazip visual-studio-code-bin 
 ```
 
 8. Reboot
@@ -108,7 +108,7 @@ All keyboard shortcuts are documented in: `i3_shortcuts.md`
 
 ## Updating arch 
 - Backup before upgrading
-- Avoid doing partial upgrades always use `pacman -Syu`
+- Avoid doing partial upgrades always use `sudo pacman -Syu`
 
 
 ## ❤️ Support My Work
